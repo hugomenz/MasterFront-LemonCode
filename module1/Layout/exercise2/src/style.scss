@@ -1,0 +1,30 @@
+@use './base.scss' as *;
+
+@use './theme-blue.scss' as *;
+/* 
+@use './theme-red.scss' as *;
+@use './theme-blue.scss' as *;
+*/
+
+.box{
+    height: 70px;
+    width: 100px;
+}
+
+.base{
+    background-color: $base-color;
+}
+
+.important{
+    background-color: darken($base-color, 30%);
+}
+
+.warning{
+    background-color: lighten($base-color, 30%);
+}
+
+
+/* base-color se debe cargar del tema importado */
+
+/* $important-color: ;
+$warning-color:  */
