@@ -1,0 +1,13 @@
+@mixin change-colors($base-color, $rate){
+    .base-color{
+        background-color: $base-color;
+    }
+    @for $i from 1 through 4{
+        .lighten-#{$i}{
+            background-color:lighten($base-color,($i*$rate));
+        }
+        .darken-#{$i}{
+            background-color:darken($base-color,($i*$rate));
+        }
+    }
+}

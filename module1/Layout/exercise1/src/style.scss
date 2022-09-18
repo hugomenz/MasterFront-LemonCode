@@ -1,18 +1,37 @@
-/* 
-div[class^="box"] { 
-    border: 1px solid black;
-    border-radius: 8px;
-    display: inline-block;
-    width: 100px;
+@use './base.scss' as *;
+
+.container{
+    display:flex;
+    gap: 8px;
+}
+
+.box { 
+    width: 80px;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
     margin-bottom: 10px;
-    background-color: lightblue;
-} 
-*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+}
 
+.base-color{
+    color:white;
+}
 
-/*
-color:lighten($color,10%);
-color:darken($color,10%); 
-*/
+.red {
+    @include change-colors(#F44236, 6);
+    color:skyblue;
+}
 
+.blue {
+    @include change-colors(#3F51B5, 6);
+    color: goldenrod;
+}
+
+.green {
+    @include change-colors(#4CB050, 6);
+    color:purple;
+}
