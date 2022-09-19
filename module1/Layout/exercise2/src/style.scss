@@ -1,14 +1,18 @@
 @use './base.scss' as *;
-
-@use './theme-blue.scss' as *;
-/* 
 @use './theme-red.scss' as *;
-@use './theme-blue.scss' as *;
-*/
+/* @use './theme-blue.scss' as *; */
+
 
 .box{
     height: 70px;
     width: 100px;
+    padding: 16px;
+    border: 1px solid #bebebecb;
+    gap: 1px;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 13px;
+    @include rounder-corners-all($radius);
 }
 
 .base{
@@ -23,8 +27,6 @@
     background-color: lighten($base-color, 30%);
 }
 
-
-/* base-color se debe cargar del tema importado */
-
-/* $important-color: ;
-$warning-color:  */
+.shadow{
+    box-shadow: $shadow-x $shadow-y 12px #0b0b0b;
+}

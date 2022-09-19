@@ -1,18 +1,43 @@
+html {
+  height: 100vh;
+  margin: 8px;
+}
+
+.principal {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.secondary {
+  font-family: Courier New, Courier, monospace;
+  font-weight: 550;
+}
+
 .box {
   height: 70px;
   width: 100px;
+  box-sizing: border-box;
+  border: 1px solid #bebebecb;
+  border-radius: 2px;
+  gap: 1px;
+  padding: 16px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 13px;
 }
 
 .base {
-  background-color: #00f;
+  background-color: red;
 }
 
 .important {
-  background-color: #006;
+  background-color: #600;
 }
 
 .warning {
-  background-color: #99f;
+  background-color: #f99;
+}
+
+.shadow {
+  box-shadow: -10px 10px 12px #0b0b0b;
 }
 
 /*# sourceMappingURL=index.b2d9cf43.css.map */

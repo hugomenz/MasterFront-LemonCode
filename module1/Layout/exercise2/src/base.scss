@@ -1,4 +1,7 @@
-
+html{
+    margin: 8px;
+    height: 100vh;
+}
 
 @mixin rounder-corners-all ($size: 0.5rem){
     border-radius: $size
