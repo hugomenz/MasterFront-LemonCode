@@ -1,6 +1,4 @@
 @media screen and (max-width: 420px) { 
-
-    
     .title{
         display: flex;
         justify-content: center;
@@ -10,16 +8,17 @@
         color:khaki;
         height: 3em;
     }
+    
     .nav-bar{
         flex-direction: column;
     }
+
     .menu-selector{
         width: 100%;
     }
 }
 
 @media screen and (min-width: 421px) and (max-width: 800px) { 
-
     .title{
         margin-left: 0;
         padding-left: 32px;
@@ -29,10 +28,12 @@
         color:khaki;
         font-size: 2em;
     }
+
     .nav-bar{
         justify-content: space-around;
         width: 100%;
     }
+
     .menu-selector{
         width: 75%;
     }
@@ -59,6 +60,7 @@
         justify-content: space-around;
         width: 75vw;
     }
+
     .menu-selector{
         width: 100%;
     }
