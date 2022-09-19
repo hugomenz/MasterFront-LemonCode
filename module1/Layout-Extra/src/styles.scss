@@ -65,19 +65,13 @@ body{
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: lightgray;
+    background-color: whitesmoke;
 
     .card{
-        margin:8px;
         padding: 8px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        width: 200px;
-        border: 1px solid grey;
-        border-radius: 5px;
+        border-radius: 3px;
         background-color: white;
     
         img{

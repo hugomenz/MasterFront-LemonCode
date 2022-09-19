@@ -16,7 +16,7 @@
     .menu-container{
         display: flex;
         justify-content: space-around;
-        
+
         .menu-title{
             display: none;
         }
@@ -27,6 +27,19 @@
             
             & li{
                 width: 15vw;
+            }
+        }
+    }
+
+    .list{
+        .card{
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 95%;
+            margin:2px;
+            
+            .member-name{
+                margin-left: 16px;
             }
         }
     }
@@ -65,5 +78,16 @@
 
     .page-container{
         grid-template-columns: 15% auto;
+    }
+
+    .list{
+        .card{
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 200px;
+            margin:8px;
+            border: 1px solid grey;
+        }
     }
 }
