@@ -1,2 +1,133 @@
 @use './base.scss' as *;
+@use './media-queries.scss' as *;
 
+body{
+    
+    font-family: 'Jost', sans-serif;
+    /* se podría usar color:white aquí pero lo dejamos
+    todo preparado con variables en las diferentes 
+    clases por si el manager cambia mañana de idea =P */
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+    border: 1px solid red;
+    padding: 1rem 1rem 0.875rem 1rem;
+    position: fixed;
+    top:0;
+    background-color: $clr-background;
+    z-index: 1;
+
+    .header-logo{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid red;
+        gap: 1rem;
+
+        .platform-title{
+            color:$clr-txt;
+        }
+    }
+
+    .header-buttons{
+        display: flex;
+        justify-content: space-around;
+        
+        align-items: center;
+        border: 1px solid red;
+
+        color: $clr-txt;
+        & div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3rem;
+            width: 4rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            &:hover{
+                background-color: $clr-nav-hover;
+                color:$clr-background;
+            }
+            &:active{
+                position:relative;
+                top: 1px;
+            }
+        }
+    }
+}
+
+
+
+
+.section-title{
+    border: 1px solid red;
+    color: $clr-txt;
+    font-size: $fs-section;
+    font-weight: $fw-semi-bold;
+    padding: 2rem 1rem 0rem 1rem; 
+
+    #top-text::after {
+        font-weight: $fw-bold;
+    }
+}
+
+.top,
+.first,
+.second {
+    display: flex;
+
+    img {
+        height:auto;
+        box-sizing:border-box;
+        max-height:100%;
+        flex-grow: 1;
+        transition: transform .5s;
+        border: 1px solid red;
+    }
+    img:hover {
+        transform: scale(1.05);
+    }
+}
+
+.top{
+    flex-direction: row-reverse;
+    //padding: 0.5rem 1rem 0.25rem 1rem;
+    border: 1px solid red;
+    max-height: $sz-max-top-sect-height;
+    min-width: $sz-img-top-min-width;
+
+    .top-item{
+        min-width: $sz-img-top-min-width;
+        flex-grow: 1;
+    }
+}
+
+.first,
+.second{
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem 0.25rem 1rem;
+
+    .item {
+        display: flex;
+        flex-grow: 1;
+        padding: 0.25rem;
+        min-width: $sz-img-min-width;
+    }
+}
+
+
+
+
+/////// TERMINAR MOVIL
+/// DISPLAY FLEX COLUMN
+/// TEXT SECTION  than TABLET
+/// HOVER AND SELECTION DISSABLED
+/// 
+/////// TERMINAR tablet
+/// /// TEXT SECTION BIGGER
+/// HOVER AND SELECTION DISSABLED
