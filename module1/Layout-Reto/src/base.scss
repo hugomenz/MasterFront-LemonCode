@@ -1,0 +1,63 @@
+
+$size-scrn: 1280px;
+$size-tblt: 1024px;
+$size-mbl: 375px;
+
+$clr-background: #141414;
+
+$fw-bold: 900;
+$fw-semi-bold: 500;
+
+$fs-logo: 2rem;
+$fs-nav: 1rem;
+$fs-section: 1.2rem;
+
+$fs-section-tb: 1.5rem;
+
+$fs-section-mbl: 1.5rem;
+$fs-nav-mbl: 1.2rem;
+
+
+@font-face {
+    font-family: 'Jost', sans-serif;
+    src: url( 'https://fonts.google.com/specimen/Jost?preview.text=warner%20live&preview.text_type=custom' );
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core root default */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utility classes */
+.fw-bold { 
+    font-weight: $fw-bold;
+}
+
+.fw-semi-bold {
+    font-weight: $fw-semi-bold
+}
