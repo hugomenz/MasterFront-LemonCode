@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Jost', sans-serif;
+    src: url( 'https://fonts.google.com/specimen/Jost?preview.text=warner%20live&preview.text_type=custom' );
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 100%;
+    
+}
+
+body { 
+    font-size: 16px; 
+    font-size: 1rem; 
+    line-height: 1; 
+    min-width: 320px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* 
+* 4px    	0.25rem
+* 8px		0.5rem
+* 12px		0.75rem
+* 14px		0.875rem
+* 16px		1rem
+* 18px		1.125rem
+* 20px		1.25rem
+* 22px		1.375rem
+* 24px		1.5rem
+* 32px		2rem
+* 36px		2.25rem
+* 48px		3rem
+* 64px		4rem
+* 72px		4.5rem
+*/

@@ -1,0 +1,59 @@
+@mixin headerFormat($hdr-height) {
+    header { 
+        height:$hdr-height; 
+    }
+
+    .top-title { 
+        margin-top: $hdr-height; 
+    }
+}
+
+@mixin headerLogo( $logo-height, $plt-title-dspl: flex ){
+    .header-logo {
+        img { 
+            height: $logo-height; 
+        }
+        .platform-title { 
+            display: $plt-title-dspl; 
+        }
+    }
+}
+
+@mixin headerButtons( $width, $fs ){
+    .header-buttons { 
+        font-size: $fs; 
+        width: $width;
+    }
+}
+
+@mixin hdrBtnHover($clr-nav-hover, $clr-background){
+    .header-buttons{
+        & div{
+            cursor: pointer;
+            &:hover{
+                background-color: $clr-nav-hover;
+                color:$clr-background;
+            }
+            &:active{
+                position:relative;
+                top: 1px;
+            }
+        }
+    }
+}
+
+@mixin scaleImgHover($scale){
+    .top,
+    .first,
+    .second {
+        img:hover {
+            transform: scale($scale);
+        }
+    }
+}
+
+@mixin sectionSize($size){
+    .section-title{
+        font-size: $size;
+    }
+}
