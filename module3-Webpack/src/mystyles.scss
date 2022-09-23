@@ -1,0 +1,16 @@
+@use "./variables" as *;
+
+.whitesmoke-bgn {
+  background-color: $f-bgn-color;
+}
+
+h2 {
+  font-size: $fs-text;
+  font-weight: $fw-ultra;
+  color: $f-color;
+}
+
+img {
+  width: $img-wth;
+  border-radius: $brd-rad;
+}
