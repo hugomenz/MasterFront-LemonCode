@@ -1,1 +1,1 @@
-# Laboratorio - Módulo 3 - Webpack
+# Master Continuo - Laboratorio - Módulo 3 - Webpack
