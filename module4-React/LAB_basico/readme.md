@@ -2,6 +2,18 @@
 
 ## Basic - Filtering Github organization and members
 
+Install npm packages:
+
+```
+npm install
+```
+
+Start working:
+
+```
+npm start
+```
+
 ### src directory structure
 
 ```
