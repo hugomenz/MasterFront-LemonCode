@@ -1,0 +1,14 @@
+.details-box {
+  margin-bottom: 16px;
+  border-bottom: 0.4rem solid #d9d900;
+}
+
+.header {
+  background-color: #2f4858;
+  color: white;
+  padding: 1px 1px 1px 8px;
+}
+
+.details {
+  margin-left: 16px;
+}
