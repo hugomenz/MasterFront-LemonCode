@@ -4,12 +4,13 @@
 
 ### src directory structure
 
-/src  
+```
+/src
 ├─core
 │ └─router
 │
 ├─global-css
-│  
+│
 ├─layouts
 │
 ├─pods
@@ -22,3 +23,4 @@
 │ └─login
 │
 └─scenes
+```
