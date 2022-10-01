@@ -10,7 +10,7 @@ export const LoginPage: React.FC = () => {
     e.preventDefault();
 
     if (username === "admin" && password === "test") {
-      navigate("/list");
+      navigate("/main");
     } else {
       alert("User / password not valid, psst... admin / test");
     }
@@ -18,29 +18,29 @@ export const LoginPage: React.FC = () => {
 
   return (
     <>
-      <form onSubmit={handleNavigation}>
-        <h2>Hello from login page</h2>
-
-        <div>
-          <div>
-            <label>Username: </label>
+      <div className="bg-img"></div>
+      <div className="login-box">
+        <h1>Access to KittyPup!</h1>
+        <form onSubmit={handleNavigation}>
+          <div className="credential-box">
             <input
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div>
-            <label>Password: </label>
+          <div className="credential-box">
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-        </div>
 
-        <button type="submit">Login</button>
-      </form>
+          <button className="btn-login" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
     </>
   );
 };
