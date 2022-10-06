@@ -7,8 +7,9 @@ import { ImgListLayout } from "../layouts/img-list.layout";
 export const CatScene: React.FC = () => {
   return (
     <ImgListLayout>
+      <Link to={switchRoutes.cat}> CAT page</Link>
+      <Link to={switchRoutes.dog}> DOG page</Link>
       <CatListContainer />
-      <Link to={switchRoutes.dog}>Navigate to DOG page</Link>
     </ImgListLayout>
   );
 };

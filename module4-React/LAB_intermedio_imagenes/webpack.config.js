@@ -55,6 +55,7 @@ module.exports = {
             loader: "sass-loader",
             options: {
               implementation: require("sass"),
+              additionalData: `@import "@/global-scss/global-var.scss";`,
             },
           },
         ],

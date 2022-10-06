@@ -7,8 +7,11 @@ import { switchRoutes } from "../core/router/routes";
 export const DogScene: React.FC = () => {
   return (
     <ImgListLayout>
-      <DogListContainer />
-      <Link to={switchRoutes.cat}>Navigate to CAT page</Link>
+      <Link to={switchRoutes.cat}> CAT page</Link>
+      <Link to={switchRoutes.dog}> DOG page</Link>
+      <ImgListLayout>
+        <DogListContainer />
+      </ImgListLayout>
     </ImgListLayout>
   );
 };

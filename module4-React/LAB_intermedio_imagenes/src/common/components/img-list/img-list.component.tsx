@@ -1,5 +1,6 @@
 import React from "react";
 import { PictureInfo } from "@/common/models/";
+
 import scss from "./img-list.styles.scss";
 
 interface Props {
