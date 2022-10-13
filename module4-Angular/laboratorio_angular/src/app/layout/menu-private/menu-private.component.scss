@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+}
+
+button:last-of-type {
+  margin-right: 8px;
+}
+
+span:nth-child(7) {
+  position: absolute;
+  right: 8rem;
+}
+
+button:nth-child(8) {
+  position: absolute;
+  right: 2rem;
+}
+
+img {
+  width: 60px;
+}

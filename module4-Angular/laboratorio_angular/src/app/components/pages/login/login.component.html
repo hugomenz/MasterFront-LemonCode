@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-content>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+      <h2>Log In</h2>
+      <mat-error *ngIf="!loginValidated">
+        User or password are incorrect. >> TRY WITH admin / test <<
+      </mat-error>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Email"
+          [(ngModel)]="user.username"
+          name="username"
+          required
+        />
+        <mat-error> Invalid Email address </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="user.password"
+          name="password"
+          required
+        />
+        <mat-error> Invalid password</mat-error>
+      </mat-form-field>
+      <!--  <mat-spinner *ngIf="spinner"></mat-spinner> -->
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="!loginForm.form.valid"
+      >
+        Login
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
