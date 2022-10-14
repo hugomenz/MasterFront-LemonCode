@@ -13,6 +13,7 @@ import { GalleryComponent } from './components/pages/gallery/gallery.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { ProfileComponent } from './components/pages/profile/profile.component';
+import { RotateDirective } from './directives/rotate.directive';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { MenuPrivateComponent } from './layout/menu-private/menu-private.component';
@@ -32,6 +33,7 @@ import { MenuPublicComponent } from './layout/menu-public/menu-public.component'
     CrudComponent,
     ProfileComponent,
     FooterComponent,
+    RotateDirective,
   ],
   imports: [
     BrowserModule,

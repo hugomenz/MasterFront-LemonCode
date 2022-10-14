@@ -1,13 +1,124 @@
 <div class="content">
-  <main class="main-container">
-    <mat-card class="gallery-container">
-      <div class="img-container">
+  <mat-card class="gallery-container">
+    <div class="img-container">
+      <img
+        src="{{ image.src }}"
+        alt="{{ image.title }}"
+        class="display-img scale-{{ imageScale }}"
+        [rotate]="0"
+        [step]="22.5"
+      />
+    </div>
+
+    <div class="btn-container">
+      <button
+        mat-raised-button
+        color="primary"
+        *ngIf="imageList[0].id !== image.id"
+        (click)="previousImg()"
+      >
+        Previous
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        disabled
+        *ngIf="imageList[0].id === image.id"
+      >
+        Previous
+      </button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        disabled
+        *ngIf="imageList[imageList.length - 1].id === image.id"
+      >
+        Next
+      </button>
+      <button
+        mat-raised-button
+        color="basic"
+        *ngIf="imageScale < 5"
+        (click)="zoomIn()"
+      >
+        Zoom in
+      </button>
+      <button mat-raised-button disabled *ngIf="imageScale === 5">
+        Zoom in
+      </button>
+      <button
+        mat-raised-button
+        color="basic"
+        *ngIf="imageScale > 1"
+        (click)="zoomOut()"
+      >
+        Zoom out
+      </button>
+      <button mat-raised-button color="basic" disabled *ngIf="imageScale === 1">
+        Zoom out
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        *ngIf="imageList[imageList.length - 1].id !== image.id"
+        (click)="nextImg()"
+      >
+        Next
+      </button>
+      <button
+        mat-raised-button
+        color="warn"
+        *ngIf="!isPlaySelected"
+        (click)="playGallery()"
+      >
+        Play
+      </button>
+      <button
+        mat-raised-button
+        color="warn"
+        *ngIf="isPlaySelected"
+        (click)="playGallery()"
+      >
+        Stop
+      </button>
+    </div>
+
+    <div class="img-list-container">
+      <button
+        mat-raised-button
+        color="primary"
+        class="nav-list"
+        (click)="setLastSelectedImg('previous')"
+      >
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <div
+        class="{{
+          image.id === image.id
+            ? 'list-img-container selected-img'
+            : 'list-img-container'
+        }}"
+        *ngFor="
+          let image of imageList
+            | slice: firstSelectedImageListItem:lastSelectedImageListItem
+        "
+      >
         <img
           src="{{ image.src }}"
           alt="{{ image.title }}"
-          class="main-img scale-{{ imageScale }}"
+          class="list-img"
+          (click)="setSelectedImg(image)"
         />
       </div>
-    </mat-card>
-  </main>
+      <button
+        mat-raised-button
+        color="primary"
+        class="pag-btn"
+        (click)="setLastSelectedImg('next')"
+      >
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+  </mat-card>
 </div>
