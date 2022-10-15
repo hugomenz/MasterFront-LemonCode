@@ -18,6 +18,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { MenuPrivateComponent } from './layout/menu-private/menu-private.component';
 import { MenuPublicComponent } from './layout/menu-public/menu-public.component';
+import { RotationComponent } from './components/pages/rotation/rotation.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MenuPublicComponent } from './layout/menu-public/menu-public.component'
     ProfileComponent,
     FooterComponent,
     RotateDirective,
+    RotationComponent,
   ],
   imports: [
     BrowserModule,
