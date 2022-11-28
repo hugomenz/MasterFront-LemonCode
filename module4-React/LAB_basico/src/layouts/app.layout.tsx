@@ -7,8 +7,8 @@ interface Props {
 
 export const AppLayout: React.FC<Props> = ({ children }) => {
   return (
-    <div className={css.layoutAppContainer}>
-      <div className={css.layoutAppHeader}>User logged in</div>
+    <div className="layout-app-container">
+      <div className="layout-app-header">User logged in</div>
       {children}
     </div>
   );

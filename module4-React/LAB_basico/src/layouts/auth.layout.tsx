@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const AuthLayout: React.FC<Props> = ({ children }) => {
-  return <div className={css.layoutCenter}>{children}</div>;
+  return <div className="layout-center">{children}</div>;
 };
