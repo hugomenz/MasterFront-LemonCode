@@ -1,18 +1,17 @@
-function isBookRead(books: {title: string, isRead: boolean }[], titleToSearch: string) {
-    const filteredBook: { title: string, isRead: boolean }[] = books.filter(book => book.title == titleToSearch);
-
-    if (filteredBook.length != 0 ){
-        return filteredBook[0].isRead
-    } else{
-        return false;
-    }
+interface Book {
+  title: string;
+  isRead: boolean;
 }
 
-const books: { title: string, isRead: boolean }[] = [
-    { title: "Harry Potter y la piedra filosofal", isRead: true },
-    { title: "Canción de hielo y fuego", isRead: false },
-    { title: "Devastación", isRead: true },
-  ];
+function isBookRead(books: Book[], titleToSearch: string) {
+  return books.find((book: Book) => book.title === titleToSearch && book.isRead);
+}
+
+const books: Book[] = [
+  { title: "Harry Potter y la piedra filosofal", isRead: true },
+  { title: "Canción de hielo y fuego", isRead: false },
+  { title: "Devastación", isRead: true },
+];
 
 console.log(isBookRead(books, "Devastación")); // true
 console.log(isBookRead(books, "Canción de hielo y fuego")); // false
