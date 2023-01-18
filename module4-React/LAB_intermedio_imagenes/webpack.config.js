@@ -7,11 +7,17 @@ const basePath = __dirname;
 module.exports = {
   context: path.join(basePath, "src"),
   resolve: {
-    extensions: [".js", ".ts", ".tsx"],
+    alias: {
+      common: path.join(basePath, "src/common"),
+      router: path.join(basePath, "src/router"),
+      pods: path.join(basePath, "src/pods"),
+      scenes: path.join(basePath, "src/scenes"),
+    },
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
     plugins: [new TsconfigPathsPlugin()],
   },
   entry: {
-    app: ["./index.tsx", "./global-scss/styles.scss"],
+    app: ["./index.tsx", "./core/scss/styles.scss"],
   },
   devtool: "eval-source-map",
   stats: "errors-only",
@@ -55,7 +61,6 @@ module.exports = {
             loader: "sass-loader",
             options: {
               implementation: require("sass"),
-              additionalData: `@import "@/global-scss/global-var.scss";`,
             },
           },
         ],
