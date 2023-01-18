@@ -1,1 +1,1 @@
-export * from "./dog.container";
+export * from "./dog-list.container";

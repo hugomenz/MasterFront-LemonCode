@@ -4,11 +4,12 @@ interface SwitchRoutes {
   root: string;
   cat: string;
   dog: string;
+  checkout: string;
 }
 
 export const switchRoutes: SwitchRoutes = {
   root: "/",
-  cat: "/cat",
-  /* cat: "/cat/:login", */
-  dog: "/dog",
+  cat: "/cats",
+  dog: "/dogs",
+  checkout: "/checkout",
 };
