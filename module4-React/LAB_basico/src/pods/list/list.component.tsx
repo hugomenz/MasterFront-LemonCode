@@ -1,8 +1,8 @@
 import { routes } from "@/core/router/routes";
 import React from "react";
-import { Link } from "react-router-dom";
 import { MemberEntity } from "./list.vm";
-import css from "./list.styles.css";
+import { HeadMemberList } from "./components/list-head";
+import { RowMemberList } from "./components/list-row";
 
 interface Props {
   members: MemberEntity[];
@@ -13,16 +13,10 @@ export const List = (props: Props) => {
 
   return (
     <>
-      <div className={css.userListContainer}>
-        <span className={css.header}>Avatar</span>
-        <span className={css.header}>Id</span>
-        <span className={css.header}>Name</span>
+      <div>
+        <HeadMemberList />
         {members.map((member) => (
-          <React.Fragment key={member.id}>
-            <img src={member.avatar_url} />
-            <span>{member.id}</span>
-            <Link to={routes.detail(member.login)}>{member.login}</Link>
-          </React.Fragment>
+          <RowMemberList key={member.id} member={member} routes={routes} />
         ))}
       </div>
     </>

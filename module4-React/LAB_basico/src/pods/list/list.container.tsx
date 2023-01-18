@@ -1,72 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useDebounce } from "use-debounce";
 import { getMemberCollection } from "./api/list.api";
-
 import { List } from "./list.component";
-import css from "./list.styles.css";
-import { MyContext, MyProvider } from "../../common/context/context.component";
-
-interface MemberEntity {
-  id: string;
-  login: string;
-  avatar_url: string;
-}
+import { Filter } from "./components/list-filter";
+import { OrgContext } from "../../common/context/org-context.component";
+import { MemberContext } from "../../common/context/list-context.component";
 
 export const ListContainer = () => {
-  const { org, setOrg } = React.useContext(MyContext);
+  const { org, setOrg } = React.useContext(OrgContext);
+  const { memberList, setMemberList } = React.useContext(MemberContext);
 
-  const [filter, setFilter] = React.useState("");
-  const [members, setMembers] = React.useState<MemberEntity[]>([]);
-  const [debouncedFilter] = useDebounce(filter, 1000);
-  const [debouncedOrg] = useDebounce(org, 1000);
-
-  React.useEffect(() => {
+  const getMemberList = (org: string) => {
     if (org !== "") {
       getMemberCollection(org).then((json) =>
-        setMembers(
+        setMemberList(
           json.filter((data) => {
-            return data.login.toUpperCase().search(filter.toUpperCase()) != -1;
+            return data.login.toUpperCase();
           })
         )
       );
     } else {
-      setMembers([]);
+      setMemberList([]);
     }
-  }, [debouncedFilter, debouncedOrg]);
+  };
 
   return (
     <>
-      <div className={css.filterBox}>
-        <div className={css.filter}>
-          <label>Organization:</label>
-          <input
-            id="org-input"
-            type="text"
-            value={org}
-            onChange={(e) => {
-              setOrg(e.target.value);
-            }}
-          />
-        </div>
-      </div>
-
-      <div className={css.filterBox}>
-        <div className={css.filter}>
-          <label>Member:</label>
-          <input
-            id="member-input"
-            type="text"
-            value={filter}
-            onChange={(e) => {
-              setFilter(e.target.value);
-            }}
-          />
-        </div>
-      </div>
-
-      <List members={members} />
-      {!members && <Link to="/detail">Navigate to detail page</Link>}
+      <Filter org={org} getMemberList={getMemberList} onChangeOrg={setOrg} />
+      <List members={memberList} />
+      {!memberList && <Link to="/detail">Navigate to detail page</Link>}
     </>
   );
 };

@@ -11,7 +11,7 @@ export const Detail = (props: Props) => {
 
   return (
     <>
-      <div className={css.detailsBox}>
+      <div className={css.detailsBox} style={{ width: "50vw" }}>
         <div className={css.header}>
           <h3>User Id: {member.id}</h3>
         </div>

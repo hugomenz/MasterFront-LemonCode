@@ -4,7 +4,6 @@ import { Detail } from "./detail.component";
 import { MemberDetailEntity } from "./detail.vm";
 import { Link, useParams } from "react-router-dom";
 import { mapMemberDetailToVm } from "./detail.mappers";
-import { MyProvider } from "../../common/context/context.component";
 
 const createDefaultMemberDetail = () => ({
   id: 0,
