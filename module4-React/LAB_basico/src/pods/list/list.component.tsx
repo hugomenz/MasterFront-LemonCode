@@ -13,12 +13,10 @@ export const List = (props: Props) => {
 
   return (
     <>
-      <div>
-        <HeadMemberList />
-        {members.map((member) => (
-          <RowMemberList key={member.id} member={member} routes={routes} />
-        ))}
-      </div>
+      <HeadMemberList />
+      {members.map((member) => (
+        <RowMemberList key={member.id} member={member} routes={routes} />
+      ))}
     </>
   );
 };
