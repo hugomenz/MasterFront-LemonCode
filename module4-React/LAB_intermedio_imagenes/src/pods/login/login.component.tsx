@@ -30,24 +30,13 @@ export const Login: React.FC<Props> = (props) => {
   return (
     <>
       <div className={scss.bgImg}></div>
-      <Card sx={{ padding: "20px" }}>
-        <CardHeader title="Access to CatsDogs!" />
+      <Card sx={{ padding: "20px" }} className={scss.loginBox}>
+        <CardHeader title="Access to CatsDogs!" className={scss.title} />
         <CardContent>
-          {/* <h1>Access to Cats&Dogs!</h1> */}
           <form onSubmit={handleSubmit}>
             <div className={scss.credentialBox}>
-              <input
-                type="text"
-                name="user"
-                value={infoForm.user}
-                onChange={handleChange}
-              />
-              <input
-                type="password"
-                name="password"
-                value={infoForm.password}
-                onChange={handleChange}
-              />
+              <input type="text" name="user" value={infoForm.user} onChange={handleChange} />
+              <input type="password" name="password" value={infoForm.password} onChange={handleChange} />
             </div>
             <Button variant="contained" className={scss.btnLogin} type="submit">
               Login
