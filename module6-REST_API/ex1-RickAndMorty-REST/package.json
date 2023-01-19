@@ -10,8 +10,7 @@
     "build:prod": "npm run clean && webpack --config ./config/webpack/prod.js",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "clean": "rimraf dist",
-    "postinstall": "cd ./server && npm install"
+    "clean": "rimraf dist"
   },
   "author": "Lemoncode",
   "license": "MIT",
