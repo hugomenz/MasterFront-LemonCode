@@ -11,6 +11,9 @@
       <p><b>bio:</b> {{ userDetail.bio }}</p>
     </div>
   </div>
+  <router-link :to="`/`">
+    <button>Go Back</button>
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -29,13 +32,11 @@ export default defineComponent({
     },
   },
   created() {
-    userDetailService
-      .get(this.login)
-      .then((userDetail: MemberDetailEntity | undefined) => {
-        if (userDetail) {
-          this.userDetail = userDetail;
-        }
-      });
+    userDetailService.get(this.login).then((userDetail: MemberDetailEntity | undefined) => {
+      if (userDetail) {
+        this.userDetail = userDetail;
+      }
+    });
   },
 });
 </script>

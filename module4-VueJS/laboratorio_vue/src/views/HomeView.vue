@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProductList from "@/components/ProductList.vue";
+import ProductList from "@/components/MemberList/MemberList.vue";
 import { onErrorCaptured, ref } from "vue";
 
 const error = ref("");
